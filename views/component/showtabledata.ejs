@@ -1,4 +1,29 @@
-
+<div class="fiat-crypto-table table-responsive" style="margin: 0px auto">
+    <table class="table-borderless text-center">
+        <thead style="margin-bottom: 50px">
+            <tr>
+                <th>
+                    <h4>
+                        <span class="pointer">#</span>
+                    </h4>
+                </th>
+                <th>
+                    <h4><span class="pointer">Platform</span></h4>
+                </th>
+                <th>
+                    <h4><span class="pointer">LastTraded Price</span></h4>
+                </th>
+                <th>
+                    <h4><span class="pointer">Buy / Sell Price</span></h4>
+                </th>
+                <th>
+                    <h4><span class="pointer">Difference</span></h4>
+                </th>
+                <th>
+                    <h4><span class="pointer">Savings</span></h4>
+                </th>
+            </tr>
+        </thead>
 <% if(data.length>0){ %>
     <% data.forEach(function(element,index){ %>
         <tr>
@@ -35,3 +60,4 @@
         </tr>
         <% }) %>
    <% } %>
+   </div>

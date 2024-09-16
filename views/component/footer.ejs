@@ -1,1 +1,111 @@
-<div>footer</div>
+<style>
+    .footer {
+        background-color: #191d28;
+        color: #ffffff;
+        padding: 15px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer1 {
+        background-color: #fbfbfb;
+        color: #121111;
+        padding: 15px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    #footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1150px;
+    }
+
+    /* .footer-left {
+        float: left;
+    }
+
+    .footer-right {
+        float: right;
+    } */
+
+    .bottomx {
+
+        border: solid 1px #191d28;
+        background-color: #191d28;
+        position: fixed;
+        left: 0;
+        align-items: center;
+        width: 100vw;
+        height: 47px;
+        bottom: 0;
+        z-index: 8
+    }
+
+    .bottoms {
+        border: solid 1px #191d28;
+        background-color: #fbfbfb;
+        position: fixed;
+        left: 0;
+        align-items: center;
+        width: 100vw;
+        height: 47px;
+        bottom: 0;
+        z-index: 8
+    }
+</style>
+
+
+
+<footer class="footer" id="footer">
+    <div class="footer-left">
+        &copy; 2024 new.com
+    </div>
+    <div class="footer-right">
+        Support
+    </div>
+</footer>
+
+<br><br><br>
+<div class="d-flex justify-content-center bottomx">
+    <button class="add-button btn btn-outline-info" style="display: block;">Add hodlinfo to home screen</button>
+</div>
+
+
+<script src="js/index.js"></script>
+<script>
+    // timer
+    const timerElement = document.getElementById('timer');
+
+   
+    let time = 60;
+
+    // Update the timer every second
+    const timer = setInterval(() => {
+      
+        timerElement.textContent = time;
+
+       
+        time--;
+
+        
+        if (time === 0) {
+           
+            clearInterval(timer);
+            timerElement.textContent = '60';
+           //refreshing the page
+            location.reload();
+        }
+    }, 1000); 
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
