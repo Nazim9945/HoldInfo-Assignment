@@ -14,9 +14,9 @@ app.get('/', async (req, res) => {
     try {
       const response = await fetch('https://api.wazirx.com/api/v2/tickers');
       const data = await response.json();
-      const firstTenData = Object.values(data).slice(0, 10);
-    //   console.log(firstTenData);
-      res.render('allinone/home');
+      const responsedata = Object.values(data).slice(0, 10);
+      console.log(responsedata);
+      res.render('allinone/home',{data:responsedata});
     } catch (error) {
       console.error(error);
       res.status(500).send('Internal Server Error');

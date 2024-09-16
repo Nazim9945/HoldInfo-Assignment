@@ -1,1 +1,37 @@
-<div>table data</div>
+
+<% if(data.length>0){ %>
+    <% data.forEach(function(element,index){ %>
+        <tr>
+            <td class="align-middle">
+                <h4 class="table-text">
+                    <%= index+1 %>
+                </h4>
+            </td>
+            <td class="align-middle">
+                <a target="_blank"
+                    href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&amp;utm_medium=affiliate&amp;utm_campaign=regnow-btn">
+                    <h4 class="table-text">
+                        <span class="exchange-name">
+                            <%=element.name %>
+                        </span>
+                    </h4>
+                </a>
+            </td>
+            <td class="align-middle">
+                <h4 class="table-text">₹ <%= Math.round(element.last *element.volume) %>
+                </h4>
+            </td>
+            <td class="align-middle">
+                <h4 class="table-text"><span>₹ <%= Math.round(element.buy * element.volume) %> / ₹<%=
+                                Math.round(element.sell * element.volume) %> </span></h4>
+            </td>
+            <td class="align-middle">
+                <h4>-<%= Math.round((element.sell - element.buy) * element.volume)/100 %> %</h4>
+            </td>
+            <td class="align-middle">
+                <h4>▼ ₹ <%= (Math.abs(element.sell-element.buy)*element.volume).toFixed(3) %>
+                </h4>
+            </td>
+        </tr>
+        <% }) %>
+   <% } %>
